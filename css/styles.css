@@ -566,7 +566,6 @@ text-decoration: none;
 }
 .service-link {
     width: 360px;
-margin-bottom: 72px;
 flex-shrink: 0;
 display: block;
 transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -631,13 +630,10 @@ letter-spacing: 0.02em;
 .customers-icon-list {
     display: flex;
     gap: 24px;
-    padding-left: 126px;
     justify-content: center;
-    padding-bottom: 120px;
 }
 
 .customers-title {
-    padding-top: 120px;
     margin-bottom: 72px;
     font-size: 36px;
     line-height: 1.11;
