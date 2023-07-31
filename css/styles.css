@@ -669,17 +669,20 @@ min-height: 584px;
 background-color: var(--dairy);
 border-radius: 4px;
 box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-transition: transform 250ms;
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
     
-    fill: var(--navyblue-cl);  
+    fill: var(--navyblue-cl);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .modal-close-btn {
     display: flex;
     fill: var(--light-cl);
+    background-color: var(--light-cl);
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -688,10 +691,21 @@ transition: transform 250ms;
     position: absolute;
     top: 24px;
     right: 24px;
+    transition: transform 250ms;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover {
-    fill: var(--pseudo-btn-cl);
+    background-color:  var(--pseudo-btn-cl);
+    border: none;
+}
+.modal-close-btn:focus {
+    background-color:  var(--pseudo-btn-cl);
+    border: none;
 }
 
 .is-hidden {
@@ -701,5 +715,10 @@ transition: transform 250ms;
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0); 
+    transform: translate(-50%, -50%) scale(0);
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-icon:hover, .close-icon:focus {
+    
+    fill: var(--white-cl) ;
 }
