@@ -413,6 +413,7 @@ margin-bottom: 16px;
     background-color: var(--iris-cl);
     fill: var(--cloud);
     border-radius: 50%;
+    height: 100%;
     width: 40px;
     height: 40px;
     align-items: center;
